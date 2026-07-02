@@ -267,7 +267,8 @@ button {
   transition: color 0.2s;
 }
 
-.cat-item.active, .cat-item:hover {
+.cat-item.active, .cat-item:hover,
+.filter-item.active, .filter-list li:hover {
   color: var(--primary);
   font-weight: 600;
 }
@@ -311,6 +312,7 @@ button {
   font-size: 0.95rem;
   color: var(--text-light);
   cursor: pointer;
+  transition: color 0.2s;
 }
 
 .filter-list li:hover {

@@ -152,6 +152,8 @@ document.addEventListener('DOMContentLoaded', () => {
         cat.addEventListener('click', () => {
             // Remove active class from all
             categoryItems.forEach(c => c.classList.remove('active'));
+            // Remove active class from filter items too
+            document.querySelectorAll('.filter-item').forEach(f => f.classList.remove('active'));
             // Add active class to clicked
             cat.classList.add('active');
             
@@ -159,6 +161,26 @@ document.addEventListener('DOMContentLoaded', () => {
             
             productCards.forEach(card => {
                 if (target === 'all' || card.getAttribute('data-category') === target) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        });
+    });
+
+    // Label Filters (New Arrival, Best Seller, Discount)
+    const filterItems = document.querySelectorAll('.filter-item');
+    filterItems.forEach(filter => {
+        filter.addEventListener('click', () => {
+            // Remove active from all category and filter items
+            document.querySelectorAll('.cat-item, .filter-item').forEach(item => item.classList.remove('active'));
+            filter.classList.add('active');
+            
+            const target = filter.getAttribute('data-filter');
+            
+            productCards.forEach(card => {
+                if (card.getAttribute('data-label') === target) {
                     card.classList.remove('hidden');
                 } else {
                     card.classList.add('hidden');

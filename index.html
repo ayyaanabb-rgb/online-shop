@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="assets/css/index.css">
+  <link rel="stylesheet" href="assets/css/index.css?v=5">
 </head>
 <body>
 
@@ -93,9 +93,9 @@
 
       <div class="sidebar-group">
         <ul class="filter-list">
-          <li><span class="icon">🔍</span> New Arrival <span class="arrow">›</span></li>
-          <li><span class="icon">⭐</span> Best Seller <span class="arrow">›</span></li>
-          <li><span class="icon">🏷️</span> On Discount <span class="arrow">›</span></li>
+          <li class="filter-item" data-filter="new-arrival"><span class="icon">🔍</span> New Arrival <span class="arrow">›</span></li>
+          <li class="filter-item" data-filter="best-seller"><span class="icon">⭐</span> Best Seller <span class="arrow">›</span></li>
+          <li class="filter-item" data-filter="discount"><span class="icon">🏷️</span> On Discount <span class="arrow">›</span></li>
         </ul>
       </div>
     </aside>
@@ -104,7 +104,7 @@
     <section class="products-grid">
       
       <!-- TV & AUDIO -->
-      <article class="product-card" data-category="tv-audio">
+      <article class="product-card" data-category="tv-audio" data-label="best-seller">
         <div class="card-img-wrap">
           <span class="tag">Music</span>
           <img src="assets/img/headphones.png" alt="Headphones" class="p-img">
@@ -275,7 +275,7 @@
           <img src="assets/img/home.png" alt="Vacuum" class="p-img">
         </div>
         <div class="p-info">
-          <h3 class="p-name">Adudu Cleaner</h3>
+          <h3 class="p-name">AeroVac Robot Vacuum</h3>
           <div class="p-meta">
             <span class="rating">⭐ 4.4 (1k Reviews)</span>
             <span class="price">$29.90</span>
@@ -290,10 +290,10 @@
       <article class="product-card" data-category="home">
         <div class="card-img-wrap">
           <span class="tag">Home</span>
-          <img src="assets/img/home.png" alt="Purifier" class="p-img" style="filter: hue-rotate(180deg);">
+          <img src="assets/img/home.png" alt="Purifier" class="p-img" style="filter: invert(1) hue-rotate(180deg) brightness(1.1);">
         </div>
         <div class="p-info">
-          <h3 class="p-name">Smart Air Purifier</h3>
+          <h3 class="p-name">AeroVac Smart Mop</h3>
           <div class="p-meta">
             <span class="rating">⭐ 4.9 (320 Reviews)</span>
             <span class="price">$50.00</span>
@@ -308,10 +308,10 @@
       <article class="product-card" data-category="home">
         <div class="card-img-wrap">
           <span class="tag">Other</span>
-          <img src="assets/img/home.png" alt="Hub" class="p-img" style="filter: hue-rotate(90deg);">
+          <img src="assets/img/home.png" alt="Hub" class="p-img" style="transform: scaleX(-1); filter: contrast(0.6) brightness(1.6);">
         </div>
         <div class="p-info">
-          <h3 class="p-name">Smart Home Hub</h3>
+          <h3 class="p-name">AeroVac Station</h3>
           <div class="p-meta">
             <span class="rating">⭐ 5.0 (1.2k Reviews)</span>
             <span class="price">$9.90</span>
@@ -323,6 +323,116 @@
         </div>
       </article>
 
+      <!-- TECH & LAPTOPS -->
+      <article class="product-card" data-category="laptops" data-label="new-arrival">
+        <div class="card-img-wrap">
+          <span class="tag" style="background:#ffeaeb; color:#ff4d4f;">New</span>
+          <img src="assets/img/laptop.png" alt="Laptop" class="p-img">
+        </div>
+        <div class="p-info">
+          <h3 class="p-name">Voltix ProBook</h3>
+          <div class="p-meta">
+            <span class="rating">⭐ 4.9 (120 Reviews)</span>
+            <span class="price">$1499.00</span>
+          </div>
+          <div class="p-actions">
+            <button class="btn-add">Add to Cart</button>
+            <button class="btn-buy">Buy Now</button>
+          </div>
+        </div>
+      </article>
+      
+      <article class="product-card" data-category="laptops" data-label="discount">
+        <div class="card-img-wrap">
+          <span class="tag" style="background:#e6f7ff; color:#1890ff;">-15%</span>
+          <img src="assets/img/laptop.png" alt="Desktop Setup" class="p-img">
+        </div>
+        <div class="p-info">
+          <h3 class="p-name">Gaming Desktop Rig</h3>
+          <div class="p-meta">
+            <span class="rating">⭐ 4.8 (85 Reviews)</span>
+            <span class="price">$1899.00</span>
+          </div>
+          <div class="p-actions">
+            <button class="btn-add">Add to Cart</button>
+            <button class="btn-buy">Buy Now</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- BEAUTY -->
+      <article class="product-card" data-category="beauty" data-label="new-arrival">
+        <div class="card-img-wrap">
+          <span class="tag" style="background:#ffeaeb; color:#ff4d4f;">New</span>
+          <img src="assets/img/beauty.png" alt="Trimmer" class="p-img" style="filter: invert(1) hue-rotate(180deg) brightness(1.05);">
+        </div>
+        <div class="p-info">
+          <h3 class="p-name">Ionic Hair Dryer Lite</h3>
+          <div class="p-meta">
+            <span class="rating">⭐ 4.6 (54 Reviews)</span>
+            <span class="price">$45.00</span>
+          </div>
+          <div class="p-actions">
+            <button class="btn-add">Add to Cart</button>
+            <button class="btn-buy">Buy Now</button>
+          </div>
+        </div>
+      </article>
+      
+      <article class="product-card" data-category="beauty" data-label="discount">
+        <div class="card-img-wrap">
+          <span class="tag" style="background:#e6f7ff; color:#1890ff;">-20%</span>
+          <img src="assets/img/beauty.png" alt="Hair Dryer Mini" class="p-img" style="filter: sepia(1) hue-rotate(300deg) saturate(3) brightness(1.2) scale(0.9);">
+        </div>
+        <div class="p-info">
+          <h3 class="p-name">Ionic Hair Dryer Mini</h3>
+          <div class="p-meta">
+            <span class="rating">⭐ 4.8 (890 Reviews)</span>
+            <span class="price">$35.00</span>
+          </div>
+          <div class="p-actions">
+            <button class="btn-add">Add to Cart</button>
+            <button class="btn-buy">Buy Now</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- MORE BEAUTY -->
+      <article class="product-card" data-category="beauty" data-label="new-arrival">
+        <div class="card-img-wrap">
+          <span class="tag" style="background:#f9f0ff; color:#722ed1;">Trending</span>
+          <img src="https://placehold.co/400x400/f3f4f6/6b7280?text=Hair+Straightener" alt="Straightener" class="p-img" style="border-radius: 12px; margin-top: 10px;">
+        </div>
+        <div class="p-info">
+          <h3 class="p-name">Ceramic Straightener Pro</h3>
+          <div class="p-meta">
+            <span class="rating">⭐ 4.7 (420 Reviews)</span>
+            <span class="price">$55.00</span>
+          </div>
+          <div class="p-actions">
+            <button class="btn-add">Add to Cart</button>
+            <button class="btn-buy">Buy Now</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="beauty">
+        <div class="card-img-wrap">
+          <span class="tag">Hot</span>
+          <img src="https://placehold.co/400x400/f3f4f6/6b7280?text=Hair+Curler" alt="Curler" class="p-img" style="border-radius: 12px; margin-top: 10px;">
+        </div>
+        <div class="p-info">
+          <h3 class="p-name">Auto Magic Curler</h3>
+          <div class="p-meta">
+            <span class="rating">⭐ 4.9 (1.1k Reviews)</span>
+            <span class="price">$65.00</span>
+          </div>
+          <div class="p-actions">
+            <button class="btn-add">Add to Cart</button>
+            <button class="btn-buy">Buy Now</button>
+          </div>
+        </div>
+      </article>
     </section>
   </main>
 
@@ -489,6 +599,6 @@
     </div>
   </div>
 
-  <script src="assets/js/script.js"></script>
+  <script src="assets/js/script.js?v=4"></script>
 </body>
 </html>
