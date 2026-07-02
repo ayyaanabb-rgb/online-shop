@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voltix - Minimalist Shop</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="assets/css/index.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="main-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        Voltix
+      </div>
+      
+      <nav class="nav-links">
+        <a href="#">Brands</a>
+        <a href="#" class="active">Shop</a>
+        <a href="#">Blog</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" id="themeToggle">🌙</button>
+        <div class="search-container">
+          <input type="text" id="searchInput" class="search-input" placeholder="Search...">
+          <button class="icon-btn" id="searchBtn">🔍</button>
+        </div>
+        <button class="icon-btn cart-btn">
+          🛒 <span class="cart-badge">0</span>
+        </button>
+        <div class="avatar">👤</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section container">
+    <div class="hero-image-wrapper">
+      <img src="assets/img/banner.jpg?v=3" alt="Hero Background" class="hero-bg">
+      <h1 class="hero-title">Shop</h1>
+    </div>
+  </section>
+
+  <!-- Search & Title Bar -->
+  <div class="container title-bar">
+    <h2>Give All You Need</h2>
+    <div class="search-bar">
+      <span class="search-icon">🔍</span>
+      <input type="text" placeholder="Search on Stuffus">
+      <button class="search-btn">Search</button>
+    </div>
+  </div>
+
+  <!-- Main Layout -->
+  <main class="container main-layout">
+    
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-group">
+        <h3 class="sidebar-title">Category</h3>
+        <ul class="cat-list">
+          <li class="cat-item active" data-target="all">
+            <span class="icon">📦</span> All Product <span class="count">24</span>
+          </li>
+          <li class="cat-item" data-target="home">
+            <span class="icon">🏠</span> For Home
+          </li>
+          <li class="cat-item" data-target="tv-audio">
+            <span class="icon">🎵</span> For Music & TV
+          </li>
+          <li class="cat-item" data-target="phones">
+            <span class="icon">📱</span> For Phone
+          </li>
+          <li class="cat-item" data-target="appliances">
+            <span class="icon">🧊</span> Appliances
+          </li>
+          <li class="cat-item" data-target="laptops">
+            <span class="icon">💻</span> Tech & Laptops
+          </li>
+          <li class="cat-item" data-target="beauty">
+            <span class="icon">✨</span> Beauty
+          </li>
+        </ul>
+      </div>
+
+      <div class="sidebar-group">
+        <ul class="filter-list">
+          <li><span class="icon">🔍</span> New Arrival <span class="arrow">›</span></li>
+          <li><span class="icon">⭐</span> Best Seller <span class="arrow">›</span></li>
+          <li><span class="icon">🏷️</span> On Discount <span class="arrow">›</span></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Product Grid -->
+    <section class="products-grid">
+      
+      <!-- TV & AUDIO -->
+      <article class="product-card" data-category="tv-audio">
+        <div class="card-img-wrap">
+          <span class="tag">Music</span>
+          <img src="assets/img/headphones.png" alt="Headphones" class="p-img">
+        </div>
+        <div class="p-info">
+          <h3 class="p-name">Headsound Pro</h3>
+          <div class="p-meta">
+            <span class="rating">⭐ 5.0 (1.2k Reviews)</span>
+            <span class="price">$12.00</span>
+          </div>
+          <div class="p-actions">
+            <button class="btn-add">Add to Cart</button>
+            <button class="btn-buy">Buy Now</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="tv-audio">
+        <div class="card-img-wrap">
+          <span class="tag">Music</span>
+          <img src="assets/img/tv.png" alt="TV" class="p-img">
+        </div>
+        <div class="p-info">
+          <h3 class="p-name">65" OLED Smart TV</h3>
+          <div class="p-meta">
+            <span class="rating">⭐ 4.9 (320 Reviews)</span>
+            <span class="price">$999.00</span>
+          </div>
+          <div class="p-actions">
+            <button class="btn-add">Add to Cart</button>
+            <button class="btn-buy">Buy Now</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="tv-audio">
+        <div class="card-img-wrap">
+          <span class="tag">Music</span>
+          <img src="assets/img/mic.png" alt="Mic" class="p-img">
+        </div>
+        <div class="p-info">
+          <h3 class="p-name">Streamer Mic V2</h3>
+          <div class="p-meta">
+            <span class="rating">⭐ 4.8 (2.4k Reviews)</span>
+            <span class="price">$89.00</span>
+          </div>
+          <div class="p-actions">
+            <button class="btn-add">Add to Cart</button>
+            <button class="btn-buy">Buy Now</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- PHONES -->
+      <article class="product-card" data-category="phones">
+        <div class="card-img-wrap">
+          <span class="tag">Phone</span>
+          <img src="assets/img/phone.png" alt="Phone" class="p-img">
+        </div>
+        <div class="p-info">
+          <h3 class="p-name">Pro Max Phone 5G</h3>
+          <div class="p-meta">
+            <span class="rating">⭐ 5.0 (1k Reviews)</span>
+            <span class="price">$1199.00</span>
+          </div>
+          <div class="p-actions">
+            <button class="btn-add">Add to Cart</button>
+            <button class="btn-buy">Buy Now</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="phones">
+        <div class="card-img-wrap">
+          <span class="tag">Phone</span>
+          <img src="assets/img/stand.png" alt="Phone Stand" class="p-img">
+        </div>
+        <div class="p-info">
+          <h3 class="p-name">Phone Desk Stand</h3>
+          <div class="p-meta">
+            <span class="rating">⭐ 5.0 (1.2k Reviews)</span>
+            <span class="price">$29.90</span>
+          </div>
+          <div class="p-actions">
+            <button class="btn-add">Add to Cart</button>
+            <button class="btn-buy">Buy Now</button>
+          </div>
+        </div>
+      </article>
+      
+      <article class="product-card" data-category="phones">
+        <div class="card-img-wrap">
+          <span class="tag">Phone</span>
+          <img src="assets/img/phone.png" alt="Phone" class="p-img" style="filter: hue-rotate(240deg);">
+        </div>
+        <div class="p-info">
+          <h3 class="p-name">Foldable Flip Z</h3>
+          <div class="p-meta">
+            <span class="rating">⭐ 4.7 (500 Reviews)</span>
+            <span class="price">$999.00</span>
+          </div>
+          <div class="p-actions">
+            <button class="btn-add">Add to Cart</button>
+            <button class="btn-buy">Buy Now</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- APPLIANCES (AC, Washer, Fridge merged for simplicity in layout) -->
+      <article class="product-card" data-category="appliances">
+        <div class="card-img-wrap">
+          <span class="tag">Home</span>
+          <img src="assets/img/ac.png" alt="AC" class="p-img">
+        </div>
+        <div class="p-info">
+          <h3 class="p-name">Eco AC Split</h3>
+          <div class="p-meta">
+            <span class="rating">⭐ 4.8 (300 Reviews)</span>
+            <span class="price">$450.00</span>
+          </div>
+          <div class="p-actions">
+            <button class="btn-add">Add to Cart</button>
+            <button class="btn-buy">Buy Now</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="appliances">
+        <div class="card-img-wrap">
+          <span class="tag">Home</span>
+          <img src="assets/img/washer.png" alt="Washer" class="p-img">
+        </div>
+        <div class="p-info">
+          <h3 class="p-name">Front Load Washer</h3>
+          <div class="p-meta">
+            <span class="rating">⭐ 4.9 (800 Reviews)</span>
+            <span class="price">$550.00</span>
+          </div>
+          <div class="p-actions">
+            <button class="btn-add">Add to Cart</button>
+            <button class="btn-buy">Buy Now</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="appliances">
+        <div class="card-img-wrap">
+          <span class="tag">Home</span>
+          <img src="assets/img/fridge.png" alt="Fridge" class="p-img">
+        </div>
+        <div class="p-info">
+          <h3 class="p-name">Side-By-Side Fridge</h3>
+          <div class="p-meta">
+            <span class="rating">⭐ 5.0 (2k Reviews)</span>
+            <span class="price">$1200.00</span>
+          </div>
+          <div class="p-actions">
+            <button class="btn-add">Add to Cart</button>
+            <button class="btn-buy">Buy Now</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- HOME -->
+      <article class="product-card" data-category="home">
+        <div class="card-img-wrap">
+          <span class="tag">Other</span>
+          <img src="assets/img/home.png" alt="Vacuum" class="p-img">
+        </div>
+        <div class="p-info">
+          <h3 class="p-name">Adudu Cleaner</h3>
+          <div class="p-meta">
+            <span class="rating">⭐ 4.4 (1k Reviews)</span>
+            <span class="price">$29.90</span>
+          </div>
+          <div class="p-actions">
+            <button class="btn-add">Add to Cart</button>
+            <button class="btn-buy">Buy Now</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="home">
+        <div class="card-img-wrap">
+          <span class="tag">Home</span>
+          <img src="assets/img/home.png" alt="Purifier" class="p-img" style="filter: hue-rotate(180deg);">
+        </div>
+        <div class="p-info">
+          <h3 class="p-name">Smart Air Purifier</h3>
+          <div class="p-meta">
+            <span class="rating">⭐ 4.9 (320 Reviews)</span>
+            <span class="price">$50.00</span>
+          </div>
+          <div class="p-actions">
+            <button class="btn-add">Add to Cart</button>
+            <button class="btn-buy">Buy Now</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="home">
+        <div class="card-img-wrap">
+          <span class="tag">Other</span>
+          <img src="assets/img/home.png" alt="Hub" class="p-img" style="filter: hue-rotate(90deg);">
+        </div>
+        <div class="p-info">
+          <h3 class="p-name">Smart Home Hub</h3>
+          <div class="p-meta">
+            <span class="rating">⭐ 5.0 (1.2k Reviews)</span>
+            <span class="price">$9.90</span>
+          </div>
+          <div class="p-actions">
+            <button class="btn-add">Add to Cart</button>
+            <button class="btn-buy">Buy Now</button>
+          </div>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <!-- Recommendations Section -->
+  <section class="container recommendations">
+    <div class="rec-header">
+      <h2>Explore our recomendations</h2>
+      <div class="rec-nav">
+        <button class="arrow-btn">←</button>
+        <button class="arrow-btn">→</button>
+      </div>
+    </div>
+    <div class="rec-scroll">
+      <article class="product-card">
+        <div class="card-img-wrap">
+          <span class="tag">Other</span>
+          <img src="assets/img/headphones.png" alt="Headphones" class="p-img" style="filter: hue-rotate(180deg);">
+        </div>
+        <div class="p-info">
+          <h3 class="p-name">Studio Headphones</h3>
+          <div class="p-meta">
+            <span class="rating">⭐ 5.0 (1.2k Reviews)</span>
+            <span class="price">$29.90</span>
+          </div>
+          <div class="p-actions">
+            <button class="btn-add">Add to Cart</button>
+            <button class="btn-buy">Buy Now</button>
+          </div>
+        </div>
+      </article>
+      <article class="product-card">
+        <div class="card-img-wrap">
+          <span class="tag">Music</span>
+          <img src="assets/img/headphones.png" alt="Headphones" class="p-img">
+        </div>
+        <div class="p-info">
+          <h3 class="p-name">Headsound Pro</h3>
+          <div class="p-meta">
+            <span class="rating">⭐ 5.0 (1.2k Reviews)</span>
+            <span class="price">$12.00</span>
+          </div>
+          <div class="p-actions">
+            <button class="btn-add">Add to Cart</button>
+            <button class="btn-buy">Buy Now</button>
+          </div>
+        </div>
+      </article>
+      <article class="product-card">
+        <div class="card-img-wrap">
+          <span class="tag">Music</span>
+          <img src="assets/img/home.png" alt="Cleaner" class="p-img">
+        </div>
+        <div class="p-info">
+          <h3 class="p-name">Adudu Cleaner</h3>
+          <div class="p-meta">
+            <span class="rating">⭐ 4.4 (1k Reviews)</span>
+            <span class="price">$29.90</span>
+          </div>
+          <div class="p-actions">
+            <button class="btn-add">Add to Cart</button>
+            <button class="btn-buy">Buy Now</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Newsletter Banner -->
+  <section class="container newsletter">
+    <div class="news-content">
+      <h2>Ready to Get<br>Our New Stuff?</h2>
+      <div class="email-input">
+        <input type="email" placeholder="Your Email">
+        <button class="btn-send">Send</button>
+      </div>
+    </div>
+    <div class="news-text">
+      <p><strong>Stuffus for Homes and Needs</strong></p>
+      <p>We'll listen to your needs, identify the best approach, and then create a bespoke smart home solution that's right for you.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer container">
+    <div class="footer-top">
+      <div class="footer-col">
+        <h4>About</h4>
+        <a href="#">Blog</a>
+        <a href="#">Meet The Team</a>
+        <a href="#">Contact Us</a>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <a href="#">Contact Us</a>
+        <a href="#">Shipping</a>
+        <a href="#">Return</a>
+        <a href="#">FAQ</a>
+      </div>
+      <div class="footer-social">
+        <h4>Social Media</h4>
+        <div class="social-icons">
+          <div class="icon-circle">X</div>
+          <div class="icon-circle">f</div>
+          <div class="icon-circle">in</div>
+          <div class="icon-circle">ig</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Copyright © 2023 Voltix. All Rights Reserved.</p>
+      <div class="footer-links">
+        <a href="#">Terms of Service</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Modal -->
+  <div class="cart-modal-overlay" id="cartModal">
+    <div class="cart-modal">
+      <div class="cart-modal-header">
+        <h2>Shopping Cart</h2>
+        <button class="close-modal-btn" id="closeCartBtn">×</button>
+      </div>
+      <div class="cart-modal-body" id="cartItemsList">
+        <!-- Cart items -->
+      </div>
+      <div class="cart-modal-footer">
+        <div class="cart-total">Total: <span id="cartTotalAmount">$0.00</span></div>
+        <button class="btn-buy checkout-btn" id="checkoutBtn" style="width: 100%; margin-top: 15px;">Checkout</button>
+      </div>
+    </div>
+  </div>
+  <!-- Checkout Modal -->
+  <div class="cart-modal-overlay" id="checkoutModal">
+    <div class="cart-modal">
+      <div class="cart-modal-header">
+        <h2>Checkout</h2>
+        <button class="close-modal-btn" id="closeCheckoutBtn">×</button>
+      </div>
+      <div class="cart-modal-body checkout-body">
+        <h3>Payment Method</h3>
+        <div class="payment-methods">
+          <label class="payment-option">
+            <input type="radio" name="payment" value="Credit Card" checked> Credit Card
+          </label>
+          <label class="payment-option">
+            <input type="radio" name="payment" value="Bank Transfer"> Bank Transfer
+          </label>
+          <label class="payment-option">
+            <input type="radio" name="payment" value="E-Wallet"> E-Wallet / QRIS
+          </label>
+        </div>
+        <div class="checkout-summary">
+          <p>Subtotal: <span id="checkoutSubtotal">$0.00</span></p>
+          <p>Shipping: <span>Free</span></p>
+          <hr>
+          <h4>Total: <span id="checkoutTotal">$0.00</span></h4>
+        </div>
+      </div>
+      <div class="cart-modal-footer">
+        <button class="btn-buy checkout-btn" id="confirmPaymentBtn" style="width: 100%;">Confirm Payment</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

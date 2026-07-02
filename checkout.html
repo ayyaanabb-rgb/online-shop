@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - NexusShop</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="assets/css/index.css">
+  <style>
+    .checkout-container {
+      max-width: 800px;
+      margin: 4rem auto;
+      padding: 2rem;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 1rem;
+      backdrop-filter: blur(var(--glass-blur));
+    }
+
+    .checkout-header {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: var(--text-muted);
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      background: rgba(0, 0, 0, 0.2);
+      border: 1px solid var(--card-border);
+      border-radius: 0.5rem;
+      color: white;
+      font-size: 1rem;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+
+    .form-group input:focus {
+      border-color: var(--primary-color);
+    }
+
+    .row {
+      display: flex;
+      gap: 1rem;
+    }
+    
+    .row .form-group {
+      flex: 1;
+    }
+
+    .pay-btn {
+      width: 100%;
+      background: linear-gradient(to right, #6366f1, #a855f7);
+      color: white;
+      border: none;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      font-size: 1.2rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      margin-top: 1rem;
+    }
+
+    .pay-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(99, 102, 241, 0.4);
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 1.5rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .back-link:hover {
+      color: white;
+    }
+
+    /* Success Overlay */
+    .success-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(15, 23, 42, 0.95);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.5s ease;
+    }
+
+    .success-overlay.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .success-icon {
+      font-size: 5rem;
+      color: #10b981;
+      margin-bottom: 1rem;
+    }
+
+    .success-overlay h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo" onclick="window.location.href='index.html'">NexusShop</div>
+  </header>
+
+  <main>
+    <div class="checkout-container">
+      <div class="checkout-header">
+        <h2>Secure Checkout</h2>
+        <p>Complete your purchase securely.</p>
+      </div>
+
+      <form id="paymentForm">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" required placeholder="John Doe">
+        </div>
+
+        <div class="form-group">
+          <label for="card">Card Number</label>
+          <input type="text" id="card" required placeholder="0000 0000 0000 0000">
+        </div>
+
+        <div class="row">
+          <div class="form-group">
+            <label for="expiry">Expiry Date</label>
+            <input type="text" id="expiry" required placeholder="MM/YY">
+          </div>
+          <div class="form-group">
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" required placeholder="123">
+          </div>
+        </div>
+
+        <button type="submit" class="pay-btn">Pay <span id="payAmount">$0.00</span></button>
+      </form>
+
+      <a href="index.html" class="back-link">← Return to Shop</a>
+    </div>
+  </main>
+
+  <div class="success-overlay" id="successOverlay">
+    <div class="success-icon">✓</div>
+    <h2>Payment Successful!</h2>
+    <p>Thank you for your purchase. Redirecting you home...</p>
+  </div>
+
+  <script src="assets/js/checkout.js"></script>
+</body>
+</html>
